@@ -13,10 +13,6 @@
     "paths": {
       "*": ["./src/*"]
     },
-    "noUnusedParameters": true,
-    "noUnusedLocals": true,
-    "strictFunctionTypes": true
-
   },
   "ts-node": {
     "compilerOptions": {

@@ -4,6 +4,6 @@ export function classNames(cls: string, mods?: TMods, additional: string[] = [])
     return [
         cls,
         ...additional,
-        ...Object.entries(mods).map(([className, condition]) => !!condition ? className : '')
-    ].join(' ')
+        ...Object.entries(mods).map(([className, condition]) => (condition ? className : '')),
+    ].join(' ');
 }
