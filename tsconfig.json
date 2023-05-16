@@ -10,11 +10,13 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
-//    "paths": {
-//      "@src/*" : ["./src/*"],
-//      "@components/*" : ["./src/components/*"],
-//      "@utils/*" : ["./src/utils/*"],
-//    }
+    "paths": {
+      "*": ["./src/*"]
+    },
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "strictFunctionTypes": true
+
   },
   "ts-node": {
     "compilerOptions": {
