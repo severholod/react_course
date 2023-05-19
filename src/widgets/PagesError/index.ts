@@ -1,0 +1,1 @@
+export { PagesError } from './ui';

@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 
 interface ILoaderProps {
     className?: string,
-    page: boolean
+    page?: boolean
 }
 export const Loader: FC<ILoaderProps> = ({ className, page = false }) => (
     <div className={

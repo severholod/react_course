@@ -11,7 +11,7 @@ const App: FC = () => {
 
     return (
         <div className={classNames('app', {}, [theme])}>
-            <Suspense fallback={<div>Loading..1.</div>}>
+            <Suspense fallback={<div>Loading...</div>}>
                 <Navbar />
                 <div className="wrap">
                     <Sidebar />
