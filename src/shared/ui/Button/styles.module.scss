@@ -8,3 +8,15 @@
     background: none;
     outline: none;
 }
+
+.primary {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #fff;
+
+    &:hover {
+        background-color: #e0dede;
+    }
+}

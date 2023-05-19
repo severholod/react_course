@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames';
 import { FC, useState } from 'react';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher';
-import { Button } from 'shared/ui/Button';
+import { Button, EThemeButton } from 'shared/ui/Button';
 import styles from './styles.module.scss';
 
 interface ISidebarProps {
@@ -18,7 +18,13 @@ export const Sidebar: FC<ISidebarProps> = ({ className }) => {
             [styles.collapsed]: collapsed,
         }, [className])}
         >
-            <Button onClick={onToggle}>toggle</Button>
+            <Button
+                onClick={onToggle}
+                theme={EThemeButton.PRIMARY}
+                className={styles.toggler}
+            >
+                toggle
+            </Button>
             <div className={styles.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher className={styles.lang} />

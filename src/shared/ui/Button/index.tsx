@@ -3,7 +3,8 @@ import { ButtonHTMLAttributes, FC } from 'react';
 import styles from './styles.module.scss';
 
 export enum EThemeButton {
-    CLEAR = 'clear'
+    CLEAR = 'clear',
+    PRIMARY = 'primary'
 }
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     className?: string;
