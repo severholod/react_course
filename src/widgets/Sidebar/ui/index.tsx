@@ -14,11 +14,14 @@ export const Sidebar: FC<ISidebarProps> = ({ className }) => {
         setCollapsed((prev) => !prev);
     };
     return (
-        <div className={classNames(styles.Sidebar, {
-            [styles.collapsed]: collapsed,
-        }, [className])}
+        <div
+            className={classNames(styles.Sidebar, {
+                [styles.collapsed]: collapsed,
+            }, [className])}
+            data-testid="sidebar"
         >
             <Button
+                data-testid="sidebar-toggle"
                 onClick={onToggle}
                 theme={EThemeButton.PRIMARY}
                 className={styles.toggler}
