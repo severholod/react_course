@@ -4,7 +4,8 @@ import styles from './styles.module.scss';
 
 export enum EThemeButton {
     CLEAR = 'clear',
-    PRIMARY = 'primary'
+    PRIMARY = 'primary',
+    OUTLINE = 'outline'
 }
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     className?: string;
