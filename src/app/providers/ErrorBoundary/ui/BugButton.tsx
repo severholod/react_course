@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, EThemeButton } from 'shared/ui/Button';
+import { Button } from 'shared/ui/Button';
+import { EButtonTheme } from 'shared/ui/Button/interfaces';
 
 export const BugButton = () => {
     const throwError = () => {
@@ -7,7 +8,7 @@ export const BugButton = () => {
     };
 
     return (
-        <Button theme={EThemeButton.PRIMARY} onClick={throwError}>
+        <Button theme={EButtonTheme.PRIMARY} onClick={throwError}>
             THROW ERROR
         </Button>
     );

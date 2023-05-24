@@ -1,11 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button, EThemeButton } from '.';
+import { EButtonTheme } from 'shared/ui/Button/interfaces';
+import { Button } from './index';
 
 const meta: Meta<typeof Button> = {
     title: 'shared/Button',
     component: Button,
-    argTypes: {},
+    args: {
+        children: 'Text',
+    },
 };
 
 export default meta;
@@ -13,21 +16,38 @@ type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
     args: {
-        children: 'Text',
-        theme: EThemeButton.PRIMARY,
+        theme: EButtonTheme.PRIMARY,
     },
 };
 
 export const Clear: Story = {
     args: {
-        children: 'Text',
-        theme: EThemeButton.CLEAR,
+        theme: EButtonTheme.CLEAR,
     },
 };
 
 export const Outline: Story = {
     args: {
-        children: 'Text',
-        theme: EThemeButton.OUTLINE,
+        theme: EButtonTheme.OUTLINE,
+    },
+};
+
+export const Background: Story = {
+    args: {
+        theme: EButtonTheme.BACKGROUD,
+    },
+};
+
+export const BackgroundInvert: Story = {
+    args: {
+        theme: EButtonTheme.BACKGROUD_INVERT,
+    },
+};
+
+export const Square: Story = {
+    args: {
+        theme: EButtonTheme.PRIMARY,
+        square: true,
+        size: '40',
     },
 };

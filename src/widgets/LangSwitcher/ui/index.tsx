@@ -1,7 +1,8 @@
 import { classNames } from 'shared/lib/classNames';
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button, EThemeButton } from 'shared/ui/Button';
+import { Button } from 'shared/ui/Button';
+import { EButtonTheme } from 'shared/ui/Button/interfaces';
 
 interface ILangSwitcherProps {
     className?: string
@@ -12,7 +13,7 @@ export const LangSwitcher: FC<ILangSwitcherProps> = ({ className }) => {
     return (
         <Button
             className={classNames('', {}, [className])}
-            theme={EThemeButton.CLEAR}
+            theme={EButtonTheme.CLEAR}
             onClick={() => i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru')}
         >
             {t('Язык')}

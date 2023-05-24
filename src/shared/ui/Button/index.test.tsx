@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import { Button, EThemeButton } from 'shared/ui/Button';
+import { Button } from 'shared/ui/Button';
+import { EButtonTheme } from 'shared/ui/Button/interfaces';
 
 describe('<Button>', () => {
     test('Рендер в ДОМ', () => {
@@ -9,7 +10,7 @@ describe('<Button>', () => {
     });
     test('Рендер с темой Clear', () => {
         const text = 'TEXT';
-        render(<Button theme={EThemeButton.CLEAR}>{text}</Button>);
+        render(<Button theme={EButtonTheme.CLEAR}>{text}</Button>);
         expect(screen.queryByText(text)).toHaveClass('clear');
     });
 });
