@@ -8,6 +8,14 @@ import { BuildOptions } from './types/config';
 export function buildPlugins({
     paths, isDev,
 } : BuildOptions): webpack.WebpackPluginInstance[] {
+    const devPlugins = isDev ? [
+        new webpack.HotModuleReplacementPlugin(),
+        new BundleAnalyzerPlugin({
+            openAnalyzer: false,
+            analyzerHost: 'localhost',
+            analyzerPort: 3005,
+        })] : [];
+
     return [
         new HTMLWebpackPlugin({
             template: paths.html,
@@ -21,11 +29,6 @@ export function buildPlugins({
             __IS_DEV__: JSON.stringify(isDev),
         }),
         new ReactRefreshWebpackPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
-        new BundleAnalyzerPlugin({
-            openAnalyzer: false,
-            analyzerHost: 'localhost',
-            analyzerPort: 3005,
-        }),
+        ...devPlugins,
     ];
 }
