@@ -10,7 +10,7 @@ export const ThemeProvider: FC = ({ children }) => {
 
     return (
         <ThemeContext.Provider value={defaultProps}>
-            <div className={classNames('theme', {}, [theme])}>
+            <div id="theme" className={classNames('theme', {}, [theme])}>
                 {children}
             </div>
         </ThemeContext.Provider>
