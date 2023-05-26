@@ -6,5 +6,7 @@
   "Не найдено": "Page is not found",
   "Ошибка": "Ошибка",
   "Обновить": "Обновить",
-  "Войти": "Войти"
+  "Войти": "Войти",
+  "increment": "increment",
+  "decrement": "decrement"
 }

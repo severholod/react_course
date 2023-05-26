@@ -1,4 +1,6 @@
 {
+  "decrement": "decrement",
+  "increment": "increment",
   "Войти": "Войти",
   "Главная": "Main",
   "Не найдено": "Not found",
