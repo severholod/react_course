@@ -5,6 +5,7 @@
   "main": "index.tsx",
   "scripts": {
     "start": "webpack serve --env port=3000",
+    "start:server": "node ./json-server/index.js",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
     "unit": "jest --config ./config/jest/jest.config.ts",
